@@ -1,7 +1,7 @@
 const { getAction, getShift, getInputFile, getOutputFile } = require('./getArgs');
 const fs = require('fs');
 const argv = require('minimist')(process.argv.slice(2));
-console.log(argv);
+
 function errorHandler(err) {
   if (err) {
     process.stderr.write(err.message + '\n');

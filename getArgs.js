@@ -1,4 +1,4 @@
-var argv = require('minimist')(process.argv.slice(2));
+const argv = require('minimist')(process.argv.slice(2));
 
 const ACTION = ['action', 'a'];
 const SHIFT = ['shift', 's'];
@@ -21,4 +21,9 @@ function getOutputFile() {
   return argv[OUTPUT[0]] || argv[OUTPUT[1]];
 }
 
-module.exports = { getAction, getShift, getInputFile, getOutputFile };
+module.exports = {
+  getAction,
+  getShift,
+  getInputFile,
+  getOutputFile,
+};

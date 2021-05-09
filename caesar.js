@@ -1,8 +1,7 @@
 const alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('');
-const ACTION = 'encode';
 
-const cryptAction = (text, mode = ACTION, shift) => {
-  if (mode != ACTION) {
+const cryptAction = (text, mode, shift) => {
+  if (mode != 'encode') {
     shift *= -1;
   }
 
@@ -19,6 +18,7 @@ const cryptAction = (text, mode = ACTION, shift) => {
         if (index >= alphabet.length) {
           index -= alphabet.length;
         }
+
         if (index < 0) {
           index += alphabet.length;
         }
